@@ -1,0 +1,27 @@
+{
+  "name": "create-dpld-app",
+  "version": "1.0.0",
+  "type": "module",
+  "author": "Szymon Borda",
+  "license": "MIT",
+  "bin": {
+    "create-dpld-app": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "scripts": {
+    "dev": "ncc build ./index.ts -w -o dist/",
+    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/prompts": "^2.4.4",
+    "@vercel/ncc": "^0.36.1",
+    "prompts": "^2.4.2",
+    "typescript": "^5.0.4"
+  }
+}
