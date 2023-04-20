@@ -1,6 +1,6 @@
 {
   "name": "create-dpld-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "author": "Szymon Borda",
   "license": "MIT",
@@ -8,8 +8,7 @@
     "create-dpld-app": "./dist/index.js"
   },
   "files": [
-    "dist",
-    "templates/**/*"
+    "dist"
   ],
   "engines": {
     "node": ">=14.18.0"

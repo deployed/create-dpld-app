@@ -10,11 +10,11 @@ interface Template {
 type TemplateChoiceTuple = [string, TemplateMap];
 type TemplateMap = Map<string, TemplateChoiceTuple | Template>;
 const TEMPLATES = new Map<string, TemplateChoiceTuple>([
-  ['root', ['Choose app type:', new Map([
-    ['SSR/SSG', ['Choose framework/library:', new Map([
-      ['Next.js', ['Choose style engine:', new Map([
-        ['tailwind', {
-          templateDir: 'next-tailwind',
+  ["root", ["Choose app type:", new Map([
+    ["SSR/SSG", ["Choose framework/library:", new Map([
+      ["Next.js", ["Choose style engine:", new Map([
+        ["tailwind", {
+          templateDir: "next-tailwind",
         }],
       ])]],
     ])]]
@@ -101,7 +101,11 @@ function copy(src: string, dest: string) {
 }
 
 function copyTemplate(template: Template, projectName: string) {
-  const templateDir = `./templates/${template.templateDir}`;
+  const templateDir = path.resolve(
+    __dirname,
+    "templates",
+    template.templateDir
+  );
   fs.mkdirSync(projectName);
   fs.readdirSync(templateDir).forEach((file) => {
     if (file === "package.json") {
