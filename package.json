@@ -1,9 +1,16 @@
 {
   "name": "create-dpld-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "type": "module",
   "author": "Szymon Borda",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deployed/create-dpld-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deployed/create-dpld-app/issues"
+  },
   "bin": {
     "create-dpld-app": "./dist/index.js"
   },
